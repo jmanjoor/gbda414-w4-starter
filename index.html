@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      This page loads the libraries our sketch depends on.
+
+      p5.js gives us drawing, images, text, and the setup()/draw() structure.
+      ml5.js gives us access to machine learning models such as MobileNet.
+
+      The order matters:
+      1. load p5.js first,
+      2. load ml5.js second,
+      3. load sketch.js last.
+
+      sketch.js uses functions from both p5 and ml5,
+      so those libraries need to exist before sketch.js runs.
+    -->
+
+    <title>Simple Image Classifier</title>
+
+    <!-- p5.js creative coding library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.9/p5.min.js"></script>
+
+    <!-- ml5.js machine learning library -->
+    <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script>
+  </head>
+
+  <body>
+    <!--
+      We do not need to add a <canvas> element by hand.
+      p5.js creates the canvas when createCanvas() runs in sketch.js.
+    -->
+
+    <!-- Our own sketch file comes last. -->
+    <script src="sketch.js"></script>
+  </body>
+</html>
